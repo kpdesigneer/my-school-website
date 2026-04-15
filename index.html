@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My School – Nurturing Minds, Building Futures</title>
+  <meta name="description" content="My School is a premier institution dedicated to academic excellence, holistic development, and building the leaders of tomorrow." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:wght@700;800&family=Quicksand:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader">
+    <div class="loader-logo">
+      <span class="loader-icon">🎓</span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="logo.png" alt="My School Logo" class="nav-logo-img" />
+        <div class="logo-text">
+          <span class="logo-name">My School</span>
+          <span class="logo-tagline">Learn • Lead • Enjoy</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#programs" class="nav-link">Programs</a></li>
+        <li><a href="#stats" class="nav-link">Achievements</a></li>
+        <li><a href="#events" class="nav-link">Events</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#admissions" class="btn-nav">Apply Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+
+    <!-- ── Full-screen video background ── -->
+    <div class="hero-video-bg">
+      <video
+        id="heroVideo"
+        class="hero-video-full"
+        autoplay muted loop playsinline
+        poster="https://images.pexels.com/videos/8159875/pictures/preview-0.jpeg"
+      >
+        <source src="hero-video.mp4" type="video/mp4" />
+        <source src="https://videos.pexels.com/video-files/8159875/8159875-hd_1920_1080_25fps.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-video-dimmer"></div>
+    </div>
+
+    <!-- ── Decorative floating shapes (subtle, on top of overlay) ── -->
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+
+    <!-- ── Main content ── -->
+    <div class="container hero-fullscreen-content">
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Admissions Open 2026–27
+        </div>
+        <h1 class="hero-title">
+          Nurturing Minds,<br />
+          <span class="hero-title-accent">Building Futures</span>
+        </h1>
+        <p class="hero-subtitle">
+          At My School, we ignite curiosity, foster creativity, and empower every student to reach their full potential in a vibrant, inclusive community.
+        </p>
+        <div class="hero-actions">
+          <a href="#admissions" class="btn-primary">
+            <span>Explore Admissions</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#about" class="btn-secondary">
+            <span>Discover More</span>
+          </a>
+        </div>
+        <div class="hero-quick-stats">
+          <div class="quick-stat">
+            <strong>25+</strong>
+            <span>Years of Excellence</span>
+          </div>
+          <div class="quick-divider"></div>
+          <div class="quick-stat">
+            <strong>3,200+</strong>
+            <span>Happy Students</span>
+          </div>
+          <div class="quick-divider"></div>
+          <div class="quick-stat">
+            <strong>98%</strong>
+            <span>Pass Rate</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Bottom info cards ── -->
+      <div class="hero-bottom-cards">
+        <div class="hero-float-card">
+          <span class="fc-icon">🏆</span>
+          <div>
+            <strong>Best School Award</strong>
+            <small>District Level 2025</small>
+          </div>
+        </div>
+        <div class="hero-float-card">
+          <span class="fc-icon">📚</span>
+          <div>
+            <strong>150+ Courses</strong>
+            <small>Academic & Co-curricular</small>
+          </div>
+        </div>
+        <div class="hero-float-card">
+          <span class="fc-icon">⭐</span>
+          <div>
+            <strong>4.9 Rating</strong>
+            <small>Parent Satisfaction</small>
+          </div>
+        </div>
+        <div class="hero-float-card">
+          <span class="fc-icon">🎓</span>
+          <div>
+            <strong>200+ Faculty</strong>
+            <small>Qualified Educators</small>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+    <!-- ── Mute toggle (bottom-right of screen) ── -->
+    <button class="hero-video-mute hero-mute-global" id="heroMuteBtn" aria-label="Toggle sound">
+      <svg id="iconMuted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+        <line x1="23" y1="9" x2="17" y2="15"/>
+        <line x1="17" y1="9" x2="23" y2="15"/>
+      </svg>
+      <svg id="iconUnmuted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+      </svg>
+    </button>
+
+    <!-- ── Scroll hint ── -->
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll to explore</span>
+    </div>
+
+  </section>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>Academic Excellence</span><span class="mx">✦</span>
+        <span>Sports & Fitness</span><span class="mx">✦</span>
+        <span>Arts & Culture</span><span class="mx">✦</span>
+        <span>Science & Tech</span><span class="mx">✦</span>
+        <span>Community Values</span><span class="mx">✦</span>
+        <span>Global Mindset</span><span class="mx">✦</span>
+        <span>Leadership Skills</span><span class="mx">✦</span>
+        <span>Creative Thinking</span><span class="mx">✦</span>
+        <span>Academic Excellence</span><span class="mx">✦</span>
+        <span>Sports & Fitness</span><span class="mx">✦</span>
+        <span>Arts & Culture</span><span class="mx">✦</span>
+        <span>Science & Tech</span><span class="mx">✦</span>
+        <span>Community Values</span><span class="mx">✦</span>
+        <span>Global Mindset</span><span class="mx">✦</span>
+        <span>Leadership Skills</span><span class="mx">✦</span>
+        <span>Creative Thinking</span><span class="mx">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about-section section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-photo-collage">
+            <div class="apc-main">
+              <img
+                src="https://images.pexels.com/photos/8364023/pexels-photo-8364023.jpeg?auto=compress&cs=tinysrgb&w=700&h=520&fit=crop"
+                alt="Students learning together in class"
+              />
+            </div>
+            <div class="apc-stack">
+              <div class="apc-small">
+                <img
+                  src="https://images.pexels.com/photos/1164519/pexels-photo-1164519.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop"
+                  alt="Happy school children studying"
+                />
+              </div>
+              <div class="apc-small">
+                <img
+                  src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop"
+                  alt="Students working in groups"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="about-badge-card">
+            <div class="abc-icon">🌟</div>
+            <div>
+              <strong>NAAC A+ Accredited</strong>
+              <small>Top-rated institution</small>
+            </div>
+          </div>
+          <div class="about-years-badge">
+            <div class="ayb-num">25</div>
+            <div class="ayb-label">Years of<br/>Excellence</div>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="section-label">About My School</div>
+          <h2 class="section-title">A Legacy of Learning <span class="accent-text">& Excellence</span></h2>
+          <p class="about-desc">Founded in 2001, My School has been a beacon of educational excellence, shaping young minds with a perfect blend of academics, sports, arts, and values. Our holistic approach ensures every child blossoms into a confident, compassionate, and capable individual.</p>
+          <div class="about-features">
+            <div class="af-item">
+              <div class="af-icon">🎯</div>
+              <div>
+                <strong>Mission-Driven</strong>
+                <p>Empowering students to become lifelong learners and responsible global citizens.</p>
+              </div>
+            </div>
+            <div class="af-item">
+              <div class="af-icon">💡</div>
+              <div>
+                <strong>Innovation First</strong>
+                <p>Integrating technology and creative thinking into every aspect of education.</p>
+              </div>
+            </div>
+            <div class="af-item">
+              <div class="af-icon">🤝</div>
+              <div>
+                <strong>Inclusive Community</strong>
+                <p>A warm, welcoming environment where every student feels valued and heard.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#programs" class="btn-primary">Explore Programs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section id="stats" class="stats-section">
+    <div class="stats-overlay"></div>
+    <div class="container">
+      <div class="stats-header">
+        <div class="section-label light">Our Achievements</div>
+        <h2 class="section-title light">Numbers That Tell <span class="accent-text-light">Our Story</span></h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card" data-target="3200">
+          <div class="stat-icon">👩‍🎓</div>
+          <div class="stat-number"><span class="count" data-target="3200">0</span>+</div>
+          <div class="stat-label">Students Enrolled</div>
+        </div>
+        <div class="stat-card" data-target="180">
+          <div class="stat-icon">👨‍🏫</div>
+          <div class="stat-number"><span class="count" data-target="180">0</span>+</div>
+          <div class="stat-label">Expert Faculty</div>
+        </div>
+        <div class="stat-card" data-target="98">
+          <div class="stat-icon">📊</div>
+          <div class="stat-number"><span class="count" data-target="98">0</span>%</div>
+          <div class="stat-label">Pass Rate</div>
+        </div>
+        <div class="stat-card" data-target="150">
+          <div class="stat-icon">🏆</div>
+          <div class="stat-number"><span class="count" data-target="150">0</span>+</div>
+          <div class="stat-label">Awards Won</div>
+        </div>
+        <div class="stat-card" data-target="25">
+          <div class="stat-icon">📅</div>
+          <div class="stat-number"><span class="count" data-target="25">0</span>+</div>
+          <div class="stat-label">Years of Excellence</div>
+        </div>
+        <div class="stat-card" data-target="12000">
+          <div class="stat-icon">🌏</div>
+          <div class="stat-number"><span class="count" data-target="12000">0</span>+</div>
+          <div class="stat-label">Alumni Network</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAMS ===== -->
+  <section id="programs" class="programs-section section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">Academic Programs</div>
+        <h2 class="section-title">World-Class <span class="accent-text">Programs</span> for Every Learner</h2>
+        <p class="section-subtitle">From foundational learning to advanced studies, we offer a rich curriculum designed to inspire, challenge, and prepare students for a bright future.</p>
+      </div>
+      <div class="programs-grid">
+        <div class="program-card" id="program-primary">
+          <div class="pc-photo">
+            <img src="https://images.pexels.com/photos/1545873/pexels-photo-1545873.jpeg?auto=compress&cs=tinysrgb&w=600&h=200&fit=crop" alt="Primary school children learning" />
+          </div>
+          <div class="pc-top">
+            <div class="pc-icon">🌱</div>
+            <div class="pc-badge">Ages 5–10</div>
+          </div>
+          <h3>Primary School</h3>
+          <p>Building strong foundations in literacy, numeracy, and creativity through playful, experiential learning.</p>
+          <ul class="pc-features">
+            <li>✅ Activity-Based Learning</li>
+            <li>✅ Smart Classrooms</li>
+            <li>✅ Art & Music Integration</li>
+          </ul>
+          <a href="#contact" class="pc-link">Learn More →</a>
+        </div>
+        <div class="program-card" id="program-middle">
+          <div class="pc-photo">
+            <img src="https://images.pexels.com/photos/5212339/pexels-photo-5212339.jpeg?auto=compress&cs=tinysrgb&w=600&h=200&fit=crop" alt="Middle school students in STEM lab" />
+          </div>
+          <div class="pc-top">
+            <div class="pc-icon">🚀</div>
+            <div class="pc-badge popular">Most Popular</div>
+          </div>
+          <h3>Middle School</h3>
+          <p>Developing critical thinking, scientific temperament, and social skills for the formative years.</p>
+          <ul class="pc-features">
+            <li>✅ STEM Focused Labs</li>
+            <li>✅ Project-Based Learning</li>
+            <li>✅ Leadership Programs</li>
+          </ul>
+          <a href="#contact" class="pc-link">Learn More →</a>
+        </div>
+        <div class="program-card" id="program-senior">
+          <div class="pc-photo">
+            <img src="https://images.pexels.com/photos/3769981/pexels-photo-3769981.jpeg?auto=compress&cs=tinysrgb&w=600&h=200&fit=crop" alt="Senior school students studying" />
+          </div>
+          <div class="pc-top">
+            <div class="pc-icon">🎓</div>
+            <div class="pc-badge">Ages 15–18</div>
+          </div>
+          <h3>Senior School</h3>
+          <p>Preparing students for board exams and competitive entrance tests with expert mentorship and robust support.</p>
+          <ul class="pc-features">
+            <li>✅ Career Counselling</li>
+            <li>✅ Competitive Exam Prep</li>
+            <li>✅ University Placement</li>
+          </ul>
+          <a href="#contact" class="pc-link">Learn More →</a>
+        </div>
+        <div class="program-card" id="program-sports">
+          <div class="pc-photo">
+            <img src="https://images.pexels.com/photos/8613207/pexels-photo-8613207.jpeg?auto=compress&cs=tinysrgb&w=600&h=200&fit=crop" alt="Students playing sports" />
+          </div>
+          <div class="pc-top">
+            <div class="pc-icon">⚽</div>
+            <div class="pc-badge">All Ages</div>
+          </div>
+          <h3>Sports Academy</h3>
+          <p>State-of-the-art sports facilities with professional coaches to nurture athletic talent and fitness.</p>
+          <ul class="pc-features">
+            <li>✅ 15+ Sports Disciplines</li>
+            <li>✅ Olympic-Standard Tracks</li>
+            <li>✅ Annual Sports Meet</li>
+          </ul>
+          <a href="#contact" class="pc-link">Learn More →</a>
+        </div>
+        <div class="program-card" id="program-arts">
+          <div class="pc-photo">
+            <img src="https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg?auto=compress&cs=tinysrgb&w=600&h=200&fit=crop" alt="Kids doing art in class" />
+          </div>
+          <div class="pc-top">
+            <div class="pc-icon">🎨</div>
+            <div class="pc-badge">All Ages</div>
+          </div>
+          <h3>Arts & Culture</h3>
+          <p>Celebrating creativity through fine arts, performing arts, music, and cultural immersion programs.</p>
+          <ul class="pc-features">
+            <li>✅ Music & Dance Studio</li>
+            <li>✅ Annual Cultural Fest</li>
+            <li>✅ Exhibition Space</li>
+          </ul>
+          <a href="#contact" class="pc-link">Learn More →</a>
+        </div>
+        <div class="program-card" id="program-tech">
+          <div class="pc-photo">
+            <img src="https://images.pexels.com/photos/7092427/pexels-photo-7092427.jpeg?auto=compress&cs=tinysrgb&w=600&h=200&fit=crop" alt="Students using computers" />
+          </div>
+          <div class="pc-top">
+            <div class="pc-icon">💻</div>
+            <div class="pc-badge">Ages 10+</div>
+          </div>
+          <h3>Tech & Innovation</h3>
+          <p>Coding, robotics, AI, and design thinking programs to prepare students for the digital future.</p>
+          <ul class="pc-features">
+            <li>✅ Robotics Club</li>
+            <li>✅ AI & Coding Labs</li>
+            <li>✅ Hackathons & Fests</li>
+          </ul>
+          <a href="#contact" class="pc-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="why-section section">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-content">
+          <div class="section-label">Why My School?</div>
+          <h2 class="section-title">The Difference You <span class="accent-text">Feel Every Day</span></h2>
+          <p>We don't just teach subjects — we shape characters. Every element of My School is designed to inspire greatness in every child.</p>
+          <div class="why-list">
+            <div class="why-item">
+              <div class="wi-num">01</div>
+              <div class="wi-text">
+                <strong>Personalized Attention</strong>
+                <p>Low student-teacher ratio ensures every child gets the guidance they deserve.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="wi-num">02</div>
+              <div class="wi-text">
+                <strong>Modern Infrastructure</strong>
+                <p>Smart classrooms, science labs, libraries, and sports facilities that inspire learning.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="wi-num">03</div>
+              <div class="wi-text">
+                <strong>Safe & Secure Campus</strong>
+                <p>24/7 surveillance, trained security staff, and a caring community that keeps students safe.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="wi-num">04</div>
+              <div class="wi-text">
+                <strong>Holistic Development</strong>
+                <p>Academics, arts, sports, and values — a 360° education for the complete individual.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why-visual">
+          <div class="why-cards-stack">
+            <div class="wcs-card wcs-1">
+              <span>🌟</span>
+              <div>
+                <strong>Excellence</strong>
+                <small>In everything we do</small>
+              </div>
+            </div>
+            <div class="wcs-card wcs-2">
+              <span>🤝</span>
+              <div>
+                <strong>Collaboration</strong>
+                <small>Students & Teachers united</small>
+              </div>
+            </div>
+            <div class="wcs-card wcs-3">
+              <span>💡</span>
+              <div>
+                <strong>Innovation</strong>
+                <small>Always ahead of the curve</small>
+              </div>
+            </div>
+            <div class="wcs-card wcs-4">
+              <span>❤️</span>
+              <div>
+                <strong>Care</strong>
+                <small>Every student matters</small>
+              </div>
+            </div>
+          </div>
+          <div class="why-circle-deco"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EVENTS ===== -->
+  <section id="events" class="events-section section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">News & Events</div>
+        <h2 class="section-title">What's <span class="accent-text">Happening</span> at My School</h2>
+      </div>
+      <div class="events-grid">
+        <div class="event-card ec-featured" id="event-annual-day">
+          <div class="ec-date-badge">
+            <div class="ec-day">28</div>
+            <div class="ec-month">APR</div>
+          </div>
+          <div class="ec-content">
+            <div class="ec-tag">🎉 Annual Event</div>
+            <h3>Annual Day Celebration 2026</h3>
+            <p>Join us for a spectacular evening of performances, award ceremonies, and celebrations of student achievements across all grades.</p>
+            <div class="ec-meta">
+              <span>📍 School Auditorium</span>
+              <span>🕕 6:00 PM onwards</span>
+            </div>
+            <a href="#contact" class="ec-btn">Register Interest →</a>
+          </div>
+        </div>
+        <div class="event-card" id="event-science-fair">
+          <div class="ec-date-badge">
+            <div class="ec-day">05</div>
+            <div class="ec-month">MAY</div>
+          </div>
+          <div class="ec-content">
+            <div class="ec-tag">🔬 Academic</div>
+            <h3>Annual Science Exhibition</h3>
+            <p>Students showcase their innovative projects and experiments to parents and guests.</p>
+            <div class="ec-meta">
+              <span>📍 Science Block</span>
+              <span>🕙 10:00 AM – 4:00 PM</span>
+            </div>
+            <a href="#contact" class="ec-btn">Learn More →</a>
+          </div>
+        </div>
+        <div class="event-card" id="event-sports-day">
+          <div class="ec-date-badge">
+            <div class="ec-day">15</div>
+            <div class="ec-month">MAY</div>
+          </div>
+          <div class="ec-content">
+            <div class="ec-tag">⚽ Sports</div>
+            <h3>Inter-School Sports Meet</h3>
+            <p>Our annual sports extravaganza featuring competitions in 15+ disciplines. Cheer for our champions!</p>
+            <div class="ec-meta">
+              <span>📍 Sports Ground</span>
+              <span>🕗 7:00 AM – 5:00 PM</span>
+            </div>
+            <a href="#contact" class="ec-btn">Learn More →</a>
+          </div>
+        </div>
+        <div class="event-card" id="event-admissions">
+          <div class="ec-date-badge">
+            <div class="ec-day">01</div>
+            <div class="ec-month">JUN</div>
+          </div>
+          <div class="ec-content">
+            <div class="ec-tag">📋 Admissions</div>
+            <h3>Open House & School Tour</h3>
+            <p>Explore our campus, meet teachers, and learn everything about admissions for 2026–27.</p>
+            <div class="ec-meta">
+              <span>📍 Main Gate</span>
+              <span>🕙 9:00 AM – 1:00 PM</span>
+            </div>
+            <a href="#contact" class="ec-btn">Register Now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="gallery" class="gallery-section section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">Campus Life</div>
+        <h2 class="section-title">Life at <span class="accent-text">My School</span></h2>
+        <p class="section-subtitle">Moments that define childhood — learning, laughter, sports, and friendships that last a lifetime.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gi-large" id="gallery-classroom">
+          <img src="https://images.pexels.com/photos/5905855/pexels-photo-5905855.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop" alt="Smart Classrooms" loading="lazy" />
+          <div class="gi-overlay"><span class="gi-label">Smart Classrooms</span></div>
+        </div>
+        <div class="gallery-item" id="gallery-lab">
+          <img src="https://images.pexels.com/photos/5905697/pexels-photo-5905697.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop" alt="Science Lab" loading="lazy" />
+          <div class="gi-overlay"><span class="gi-label">Science Lab</span></div>
+        </div>
+        <div class="gallery-item" id="gallery-sports">
+          <img src="https://images.pexels.com/photos/8613310/pexels-photo-8613310.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop" alt="Sports Ground" loading="lazy" />
+          <div class="gi-overlay"><span class="gi-label">Sports Ground</span></div>
+        </div>
+        <div class="gallery-item gi-tall" id="gallery-arts">
+          <img src="https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg?auto=compress&cs=tinysrgb&w=500&h=700&fit=crop" alt="Art Studio" loading="lazy" />
+          <div class="gi-overlay"><span class="gi-label">Art Studio</span></div>
+        </div>
+        <div class="gallery-item" id="gallery-library">
+          <img src="https://images.pexels.com/photos/7516735/pexels-photo-7516735.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop" alt="Library" loading="lazy" />
+          <div class="gi-overlay"><span class="gi-label">Library</span></div>
+        </div>
+        <div class="gallery-item" id="gallery-music">
+          <img src="https://images.pexels.com/photos/3808057/pexels-photo-3808057.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop" alt="Music Room" loading="lazy" />
+          <div class="gi-overlay"><span class="gi-label">Music Room</span></div>
+        </div>
+        <div class="gallery-item" id="gallery-computer">
+          <img src="https://images.pexels.com/photos/7092427/pexels-photo-7092427.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop" alt="Computer Lab" loading="lazy" />
+          <div class="gi-overlay"><span class="gi-label">Computer Lab</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials-section section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">Testimonials</div>
+        <h2 class="section-title">Voices of <span class="accent-text">Our Community</span></h2>
+      </div>
+      <div class="testimonials-slider" id="testimonialsSlider">
+        <div class="testimonial-card active" id="testimonial-1">
+          <div class="tc-stars">⭐⭐⭐⭐⭐</div>
+          <p class="tc-quote">"My School has been a life-changing experience for my daughter. The teachers are incredibly dedicated, and the environment is nurturing and inspiring. She's grown not just academically but as a person."</p>
+          <div class="tc-author">
+            <div class="tc-avatar">P</div>
+            <div>
+              <strong>Priya Sharma</strong>
+              <small>Parent, Grade 8</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" id="testimonial-2">
+          <div class="tc-stars">⭐⭐⭐⭐⭐</div>
+          <p class="tc-quote">"I've been studying at My School for 5 years and I couldn't imagine a better place. The sports facilities are amazing and the teachers really care about helping you succeed in everything you do."</p>
+          <div class="tc-author">
+            <div class="tc-avatar tc-orange">R</div>
+            <div>
+              <strong>Rahul Mehta</strong>
+              <small>Student, Grade 10</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" id="testimonial-3">
+          <div class="tc-stars">⭐⭐⭐⭐⭐</div>
+          <p class="tc-quote">"As an alumnus, I owe my success to the strong foundation My School gave me. The values, skills, and friendships I gained here have shaped every aspect of my professional and personal life."</p>
+          <div class="tc-author">
+            <div class="tc-avatar">A</div>
+            <div>
+              <strong>Ananya Patel</strong>
+              <small>Alumna, Batch of 2018</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-dots" id="sliderDots">
+        <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ADMISSIONS ===== -->
+  <section id="admissions" class="admissions-section section">
+    <div class="admissions-overlay"></div>
+    <div class="container">
+      <div class="admissions-grid">
+        <div class="admissions-content">
+          <div class="section-label light">Admissions 2026–27</div>
+          <h2 class="section-title light">Begin Your Child's <span class="accent-text-light">Journey With Us</span></h2>
+          <p style="color: rgba(255,255,255,0.85); margin-bottom: 2rem;">Applications are now open for all grades. Limited seats available — secure your child's future at My School today.</p>
+          <div class="admission-steps">
+            <div class="as-step">
+              <div class="as-num">1</div>
+              <div>
+                <strong>Fill the Form</strong>
+                <small>Complete the online application</small>
+              </div>
+            </div>
+            <div class="as-step">
+              <div class="as-num">2</div>
+              <div>
+                <strong>Entrance Test</strong>
+                <small>Age-appropriate assessment</small>
+              </div>
+            </div>
+            <div class="as-step">
+              <div class="as-num">3</div>
+              <div>
+                <strong>Interaction</strong>
+                <small>Meet with our counsellors</small>
+              </div>
+            </div>
+            <div class="as-step">
+              <div class="as-num">4</div>
+              <div>
+                <strong>Welcome!</strong>
+                <small>Join the My School family</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="admissions-form-wrap">
+          <div class="admissions-form">
+            <h3>Get Started Today</h3>
+            <form id="admissionForm" novalidate>
+              <div class="form-group">
+                <label for="parentName">Parent / Guardian Name</label>
+                <input type="text" id="parentName" placeholder="Enter your full name" required />
+              </div>
+              <div class="form-group">
+                <label for="studentName">Student's Name</label>
+                <input type="text" id="studentName" placeholder="Enter student's name" required />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="grade">Applying for Grade</label>
+                  <select id="grade">
+                    <option value="">Select Grade</option>
+                    <option>Grade 1</option>
+                    <option>Grade 2</option>
+                    <option>Grade 3</option>
+                    <option>Grade 4</option>
+                    <option>Grade 5</option>
+                    <option>Grade 6</option>
+                    <option>Grade 7</option>
+                    <option>Grade 8</option>
+                    <option>Grade 9</option>
+                    <option>Grade 10</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="your@email.com" required />
+              </div>
+              <button type="submit" class="btn-form">
+                <span>Submit Application</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact-section section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">We'd Love to <span class="accent-text">Hear From You</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="ci-item" id="contact-address">
+            <div class="ci-icon">📍</div>
+            <div>
+              <strong>Our Address</strong>
+              <p>123 Education Lane, Knowledge Park,<br/>City – 400001, India</p>
+            </div>
+          </div>
+          <div class="ci-item" id="contact-phone">
+            <div class="ci-icon">📞</div>
+            <div>
+              <strong>Phone</strong>
+              <p>+91 98765 43210<br/>+91 91234 56789</p>
+            </div>
+          </div>
+          <div class="ci-item" id="contact-email">
+            <div class="ci-icon">✉️</div>
+            <div>
+              <strong>Email</strong>
+              <p>info@myschool.edu.in<br/>admissions@myschool.edu.in</p>
+            </div>
+          </div>
+          <div class="ci-item" id="contact-hours">
+            <div class="ci-icon">🕐</div>
+            <div>
+              <strong>Office Hours</strong>
+              <p>Monday – Saturday: 8:00 AM – 4:00 PM<br/>Sunday: Closed</p>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="#" class="cs-link" id="social-facebook" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="cs-link" id="social-instagram" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="cs-link" id="social-twitter" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+            </a>
+            <a href="#" class="cs-link" id="social-youtube" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contact-map">
+          <div class="map-placeholder">
+            <div class="map-pin-anim">
+              <div class="map-pin">📍</div>
+              <div class="map-ripple"></div>
+            </div>
+            <p>My School Campus</p>
+            <small>123 Education Lane, Knowledge Park</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img src="logo.png" alt="My School Logo" class="footer-logo-img" />
+              <div class="logo-text">
+                <span class="logo-name">My School</span>
+                <span class="logo-tagline">Learn • Lead • Enjoy</span>
+              </div>
+            </div>
+            <p class="footer-about">Nurturing minds and building futures since 2001. A place where every child's potential is recognized and celebrated.</p>
+            <div class="footer-badges">
+              <span class="fb-badge">🏅 NAAC A+</span>
+              <span class="fb-badge">🌟 ISO Certified</span>
+            </div>
+          </div>
+          <div class="footer-links-group">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#programs">Programs</a></li>
+              <li><a href="#events">Events</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-group">
+            <h4>Academics</h4>
+            <ul>
+              <li><a href="#programs">Primary School</a></li>
+              <li><a href="#programs">Middle School</a></li>
+              <li><a href="#programs">Senior School</a></li>
+              <li><a href="#programs">Sports Academy</a></li>
+              <li><a href="#programs">Tech & Innovation</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-group">
+            <h4>Contact Us</h4>
+            <ul>
+              <li>📍 123 Education Lane</li>
+              <li>📞 +91 98765 43210</li>
+              <li>✉️ info@myschool.edu.in</li>
+              <li>🕐 Mon–Sat: 8AM – 4PM</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 My School. All Rights Reserved. Made with ❤️ for Education.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- ===== SUCCESS TOAST ===== -->
+  <div id="toast" class="toast">
+    <span class="toast-icon">✅</span>
+    <span id="toastMsg">Application submitted successfully!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
