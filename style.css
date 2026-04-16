@@ -874,6 +874,29 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 .toast-icon { font-size: 1.2rem; }
 
+/* ===== LIGHTBOX ===== */
+.lightbox {
+  position: fixed; inset: 0; background: rgba(13,27,42,0.97);
+  z-index: 2000; display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+}
+.lightbox.active { opacity: 1; pointer-events: auto; }
+.lightbox-content {
+  max-width: 90%; max-height: 85vh; border-radius: var(--radius-lg);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5); object-fit: contain;
+  transform: scale(0.95); transition: transform 0.3s ease;
+}
+.lightbox.active .lightbox-content { transform: scale(1); }
+.lightbox-close {
+  position: absolute; top: 1.5rem; right: 2rem;
+  color: white; font-size: 3rem; font-weight: 300; line-height: 1;
+  cursor: pointer; transition: color 0.2s;
+}
+.lightbox-close:hover { color: var(--primary); }
+.gallery-item { cursor: zoom-in; }
+
+
 /* ===== ANIMATIONS ===== */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }

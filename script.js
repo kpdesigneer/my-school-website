@@ -267,6 +267,44 @@ document.addEventListener('DOMContentLoaded', () => {
   // (real photos now; hover zoom via CSS transition)
   // ──────────────────────────────
 
+  // ──────────────────────────────
+  // 14. LIGHTBOX
+  // ──────────────────────────────
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.querySelector('.lightbox-close');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  if (lightbox && lightboxImg && galleryItems.length > 0) {
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        if (img) {
+          lightboxImg.src = img.src;
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        if (!lightbox.classList.contains('active')) {
+          lightboxImg.src = '';
+        }
+      }, 300);
+    };
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg) {
+        closeLightbox();
+      }
+    });
+  }
+
   // Initial triggers
   updateActiveLink();
   toggleBackToTop();
