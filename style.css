@@ -497,28 +497,34 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .program-card.featured .pc-photo { margin: -2rem -2rem 1.25rem; }
 
 /* ===== FOUNDER ===== */
-.bg-light { background: var(--off-white); }
-.founder-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; }
-.founder-image { position: relative; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg); }
-.founder-image img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; }
-.founder-overlay-name {
+.bg-light { background: #fdfdfd; }
+.founder-wrapper { max-width: 1000px; margin: 0 auto; }
+
+.founder-card-modern {
+  display: grid; grid-template-columns: 350px 1fr; gap: 3.5rem;
+  background: white; border-radius: var(--radius-xl); padding: 3rem;
+  box-shadow: 0 20px 40px rgba(13, 27, 42, 0.06); border: 1px solid var(--border);
+}
+.fcm-image-col { display: flex; flex-direction: column; gap: 2rem; }
+.fcm-image-wrapper { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
+.fcm-image-wrapper img { width: 100%; aspect-ratio: 1/1; object-fit: cover; object-position: top center; display: block; }
+
+.fcm-name-badge {
   position: absolute; bottom: 0; left: 0; right: 0;
-  background: linear-gradient(to top, rgba(13,27,42,0.95), transparent);
-  padding: 2.5rem 1.5rem 1.5rem; color: white;
+  background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
+  padding: 1rem; text-align: center; border-top: 1px solid var(--border);
 }
-.founder-overlay-name strong { display: block; font-size: 1.4rem; font-family: var(--font-heading); margin-bottom: 0.2rem; }
-.founder-overlay-name span { font-size: 0.9rem; color: rgba(255,255,255,0.8); }
-.founder-quote {
-  position: relative; margin: 1.5rem 0; padding: 1.8rem;
-  background: var(--surface); border-left: 4px solid var(--primary);
-  border-radius: 0 var(--radius-md) var(--radius-md) 0; box-shadow: var(--shadow-sm);
-}
-.founder-quote p { color: var(--primary-dark); font-size: 1.1rem; line-height: 1.6; margin: 0; }
-.founder-poem-box {
-  margin-top: 1.5rem; padding: 1.5rem; background: var(--primary-xlight);
-  border-radius: var(--radius-md); border: 1px dashed rgba(5,115,129,0.3);
-}
-.founder-poem-box p { margin: 0; color: var(--text); font-size: 0.95rem; line-height: 1.7; text-align: center; }
+.fcm-name-badge strong { display: block; font-size: 1.15rem; font-family: var(--font-heading); color: var(--dark); }
+.fcm-name-badge span { font-size: 0.8rem; color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+
+.founder-poem-elegant { font-family: 'Playfair Display', serif; font-size: 1.05rem; line-height: 1.8; color: var(--text-light); text-align: center; position: relative; padding: 0 1rem; }
+.founder-poem-elegant::before { content: '✦'; display: block; color: var(--primary-light); font-size: 1.5rem; margin-bottom: 0.5rem; }
+
+.fcm-content-col { display: flex; flex-direction: column; justify-content: center; position: relative; }
+.quote-icon { color: rgba(242, 104, 19, 0.15); margin-bottom: 1.5rem; }
+.fcm-quote-large { font-family: var(--font-heading); font-size: 1.85rem; line-height: 1.4; color: var(--dark); margin-bottom: 1.5rem; }
+.fcm-text p { font-size: 1.05rem; color: var(--text-light); line-height: 1.8; margin-bottom: 1.25rem; }
+.fcm-text p:last-child { margin-bottom: 0; }
 
 /* ===== STATS ===== */
 .stats-section {
@@ -963,8 +969,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .apc-main { aspect-ratio: 16/9; }
 
   /* Founder */
-  .founder-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .founder-image img { aspect-ratio: 16/10; }
+  .founder-card-modern { grid-template-columns: 1fr; padding: 2rem; gap: 2.5rem; }
+  .fcm-image-col { max-width: 400px; margin: 0 auto; }
+  .fcm-quote-large { font-size: 1.5rem; }
 
   /* Stats */
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
