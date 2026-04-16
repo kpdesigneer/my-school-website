@@ -496,6 +496,30 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .program-card:hover .pc-photo img { transform: scale(1.07); }
 .program-card.featured .pc-photo { margin: -2rem -2rem 1.25rem; }
 
+/* ===== FOUNDER ===== */
+.bg-light { background: var(--off-white); }
+.founder-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; }
+.founder-image { position: relative; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg); }
+.founder-image img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; }
+.founder-overlay-name {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(13,27,42,0.95), transparent);
+  padding: 2.5rem 1.5rem 1.5rem; color: white;
+}
+.founder-overlay-name strong { display: block; font-size: 1.4rem; font-family: var(--font-heading); margin-bottom: 0.2rem; }
+.founder-overlay-name span { font-size: 0.9rem; color: rgba(255,255,255,0.8); }
+.founder-quote {
+  position: relative; margin: 1.5rem 0; padding: 1.8rem;
+  background: var(--surface); border-left: 4px solid var(--primary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0; box-shadow: var(--shadow-sm);
+}
+.founder-quote p { color: var(--primary-dark); font-size: 1.1rem; line-height: 1.6; margin: 0; }
+.founder-poem-box {
+  margin-top: 1.5rem; padding: 1.5rem; background: var(--primary-xlight);
+  border-radius: var(--radius-md); border: 1px dashed rgba(5,115,129,0.3);
+}
+.founder-poem-box p { margin: 0; color: var(--text); font-size: 0.95rem; line-height: 1.7; text-align: center; }
+
 /* ===== STATS ===== */
 .stats-section {
   background: linear-gradient(135deg, var(--dark) 0%, #073a4a 50%, var(--dark-alt) 100%);
@@ -937,6 +961,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .about-photo-collage { grid-template-columns: 1fr; }
   .apc-stack { flex-direction: row; }
   .apc-main { aspect-ratio: 16/9; }
+
+  /* Founder */
+  .founder-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .founder-image img { aspect-ratio: 16/10; }
 
   /* Stats */
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
