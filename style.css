@@ -517,8 +517,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .fcm-name-badge strong { display: block; font-size: 1.15rem; font-family: var(--font-heading); color: var(--dark); }
 .fcm-name-badge span { font-size: 0.8rem; color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
 
-.founder-poem-elegant { font-family: 'Playfair Display', serif; font-size: 1.05rem; line-height: 1.8; color: var(--text-light); text-align: center; position: relative; padding: 0 1rem; }
-.founder-poem-elegant::before { content: '✦'; display: block; color: var(--primary-light); font-size: 1.5rem; margin-bottom: 0.5rem; }
+.founder-poem-elegant { 
+  margin-top: 2.5rem; 
+  padding: 1.5rem 1.5rem 1.5rem 2rem; 
+  background: var(--light); 
+  border-left: 4px solid var(--primary); 
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-family: 'Playfair Display', serif; 
+  font-size: 1.15rem; 
+  line-height: 1.6; 
+  color: var(--dark); 
+  position: relative; 
+}
+.founder-poem-elegant::before { 
+  content: '"'; 
+  position: absolute; 
+  top: 0.5rem; 
+  left: -20px; 
+  color: var(--primary); 
+  font-size: 3rem; 
+  opacity: 0.2; 
+  font-family: Arial, serif; 
+}
 
 .fcm-content-col { display: flex; flex-direction: column; justify-content: center; position: relative; }
 .quote-icon { color: rgba(242, 104, 19, 0.15); margin-bottom: 1.5rem; }
