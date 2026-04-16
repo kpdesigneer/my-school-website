@@ -518,26 +518,34 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .fcm-name-badge span { font-size: 0.8rem; color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
 
 .founder-poem-elegant { 
-  margin-top: 2.5rem; 
-  padding: 1.5rem 1.5rem 1.5rem 2rem; 
+  grid-column: 1 / -1;
+  margin-top: 1rem; 
+  padding: 2.5rem; 
   background: var(--light); 
-  border-left: 4px solid var(--primary); 
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  border-top: 4px solid var(--primary); 
+  border-radius: var(--radius-md);
   font-family: 'Playfair Display', serif; 
-  font-size: 1.15rem; 
-  line-height: 1.6; 
+  font-size: 1.1rem; 
+  line-height: 1.8; 
   color: var(--dark); 
   position: relative; 
+  column-count: 2;
+  column-gap: 3rem;
+  column-rule: 1px solid var(--border);
+}
+@media (max-width: 768px) {
+  .founder-poem-elegant { column-count: 1; padding: 1.5rem; }
 }
 .founder-poem-elegant::before { 
   content: '"'; 
   position: absolute; 
-  top: 0.5rem; 
-  left: -20px; 
+  top: -10px; 
+  left: 30px; 
   color: var(--primary); 
-  font-size: 3rem; 
-  opacity: 0.2; 
+  font-size: 4rem; 
+  opacity: 0.15; 
   font-family: Arial, serif; 
+  line-height: 1;
 }
 
 .fcm-content-col { display: flex; flex-direction: column; justify-content: center; position: relative; }
