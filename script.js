@@ -10,21 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loader.classList.add('hidden');
   }, 1800);
 
-  // ──────────────────────────────
-  // 2. HERO VIDEO – mute toggle
-  // ──────────────────────────────
-  const heroVideo   = document.getElementById('heroVideo');
-  const heroMuteBtn = document.getElementById('heroMuteBtn');
-  const iconMuted   = document.getElementById('iconMuted');
-  const iconUnmuted = document.getElementById('iconUnmuted');
-
-  if (heroMuteBtn && heroVideo) {
-    heroMuteBtn.addEventListener('click', () => {
-      heroVideo.muted = !heroVideo.muted;
-      iconMuted.style.display   = heroVideo.muted ? 'block' : 'none';
-      iconUnmuted.style.display = heroVideo.muted ? 'none'  : 'block';
-    });
-  }
+  // Video removed, background is now dynamic image
 
   // ──────────────────────────────
   // 2. NAVBAR – scroll behaviour
