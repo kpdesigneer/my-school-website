@@ -1616,14 +1616,34 @@ button {
   background: var(--surface);
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 220px;
-  gap: 1rem;
+.gallery-marquee-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.gallery-marquee-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: scrollGallery 30s linear infinite;
+}
+
+.gallery-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollGallery {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 0.75rem)); }
 }
 
 .gallery-item {
+  width: 320px;
+  height: 240px;
+  flex-shrink: 0;
   border-radius: var(--radius-md);
   overflow: hidden;
   cursor: pointer;
@@ -1632,17 +1652,8 @@ button {
 }
 
 .gallery-item:hover {
-  transform: scale(1.02);
+  transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
-}
-
-.gi-large {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.gi-tall {
-  grid-row: span 2;
 }
 
 .gallery-item img {
